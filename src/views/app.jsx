@@ -4,9 +4,9 @@ import { Link } from 'dva/router'
 import Example from '../components/app1.jsx'
 import styles from './app.less'
 
-function IndexPage({dispatch, topics: {list, curpage}}) {
+const IndexPage = ({dispatch, topics: {list, curpage}}) => {
     var li = list.map(item => {
-        return <li key={item.id}><Link activeClassName="v-link-active" to={`/article/${item.id}`}>{ item.title }</Link></li>
+        return <li key={item.id}><Link activeClassName="v-link-active" to={`/article/${item.id}`}>{item.title}</Link></li>
     })
     return (
         <div className={styles.normal}>

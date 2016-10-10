@@ -1,10 +1,12 @@
 import dva from 'dva'
+import { browserHistory } from 'dva/router'
 import topics from './models/topics'
 import topic from './models/topic'
 import router from './router.jsx'
 
 // 1. Initialize
 const app = dva({
+    history: browserHistory,
     onError(error) {
         console.error(error.stack)
     },
