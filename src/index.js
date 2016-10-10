@@ -1,5 +1,6 @@
 import dva from 'dva'
-import users from './models/users'
+import topics from './models/topics'
+import topic from './models/topic'
 import router from './router.jsx'
 
 // 1. Initialize
@@ -13,7 +14,8 @@ const app = dva({
 //app.use({});
 
 // 3. Model
-app.model(users)
+app.model(topics)
+app.model(topic)
 
 // 4. Router
 app.router(router)

@@ -19,7 +19,7 @@
     "fsevents": "1.0.14"
   },
   "scripts": {
-    "dev": "cooking watch",
-    "dist": "cooking build"
+    "dev": "cooking watch -p",
+    "dist": "cooking build -p"
   }
 }

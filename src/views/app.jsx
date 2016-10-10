@@ -1,11 +1,12 @@
 import React from 'react'
 import {connect} from 'dva'
+import { Link } from 'dva/router'
 import Example from '../components/app1.jsx'
 import styles from './app.less'
 
-function IndexPage({dispatch, users: {list, curpage}}) {
+function IndexPage({dispatch, topics: {list, curpage}}) {
     var li = list.map(item => {
-        return <li key={item.id}>{ item.title }</li>
+        return <li key={item.id}><Link activeClassName="v-link-active" to={`/article/${item.id}`}>{ item.title }</Link></li>
     })
     return (
         <div className={styles.normal}>
@@ -14,7 +15,7 @@ function IndexPage({dispatch, users: {list, curpage}}) {
             <hr />
             <ul className={styles.list}>
                 {li}
-                <li><a onClick={() => dispatch({type: 'users/query', payload: { page: curpage }})} href="javascript:;">加载更多</a></li>
+                <li><a onClick={() => dispatch({type: 'topics/query', payload: { page: curpage }})} href="javascript:;">加载更多</a></li>
             </ul>
         </div>
     )
@@ -22,8 +23,8 @@ function IndexPage({dispatch, users: {list, curpage}}) {
 
 IndexPage.propTypes = {}
 
-function mapStateToProps({ users }) {
-    return {users}
+function mapStateToProps({ topics }) {
+    return { topics }
 }
 
 export default connect(mapStateToProps)(IndexPage)
