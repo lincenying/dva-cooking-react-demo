@@ -1,10 +1,10 @@
 import React from 'react'
 import {connect} from 'dva'
-import styles from './app.less'
+import './app.less'
 
 const Article = ({topic: {data}}) => {
     return (
-        <div className={styles.normal}>
+        <div className="normal">
             <h1>Welcome to dva!</h1>
             <hr />
             <div dangerouslySetInnerHTML={{__html: data.content}} />
