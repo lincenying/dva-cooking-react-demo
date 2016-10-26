@@ -1,8 +1,10 @@
 import dva from 'dva'
 import { browserHistory } from 'dva/router'
-import topics from './models/topics'
-import topic from './models/topic'
+
 import router from './router.jsx'
+
+import './views/app.css'
+import './views/app.less'
 
 // 1. Initialize
 const app = dva({
@@ -16,8 +18,8 @@ const app = dva({
 //app.use({});
 
 // 3. Model
-app.model(topics)
-app.model(topic)
+// app.model(topics)
+// app.model(topic)
 
 // 4. Router
 app.router(router)

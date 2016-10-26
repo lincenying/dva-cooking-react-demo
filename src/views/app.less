@@ -5,6 +5,9 @@
 .list {
   margin-top: 20px;
   .test {
-      color:red;
+      a {color:red}
+      &:nth-child(2n) {
+          a { color: blue}
+      }
   }
 }

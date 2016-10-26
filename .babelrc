@@ -4,6 +4,11 @@
         "transform-decorators-legacy", ["transform-runtime", {
             "polyfill": true,
             "regenerator": true
+        }],
+        ["import", {
+          "libraryName": "antd",
+          "libraryDirectory": "lib",
+          "style": "css"
         }]
     ],
     "env": {

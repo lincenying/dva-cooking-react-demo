@@ -1,10 +1,12 @@
 import React from 'react'
 import {connect} from 'dva'
 import { Link } from 'dva/router'
-import { Row, Col } from 'antd'
+//import Row from 'antd/lib/row'
+//import 'antd/lib/row/style'
+//import Col from 'antd/lib/col'
+//import 'antd/lib/col/style'
+import {Row, Col} from 'antd'
 import Example from '../components/app1.jsx'
-import 'antd/dist/antd.css'
-import './app.less'
 
 
 const IndexPage = ({dispatch, topics: {list, curpage}}) => {
