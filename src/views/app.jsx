@@ -8,7 +8,6 @@ import { Link } from 'dva/router'
 import {Row, Col} from 'antd'
 import Example from '../components/app1.jsx'
 
-
 const IndexPage = ({dispatch, topics: {list, curpage}}) => {
     var li = list.map(item => {
         return <li className="test" key={item.id}><Link activeClassName="v-link-active" to={`/article/${item.id}`}>{item.title}</Link></li>
