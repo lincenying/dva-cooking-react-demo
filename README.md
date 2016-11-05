@@ -4,7 +4,7 @@
 ```
 npm install -g cooking-cli
 
-npm install
+npm install  or  yarn
 
 // 开发模式
 npm run dev
